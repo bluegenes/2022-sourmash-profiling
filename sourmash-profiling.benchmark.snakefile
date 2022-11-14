@@ -2,7 +2,7 @@ import os, sys
 import pandas as pd
 import glob
 
-configfile: "config.yml"
+configfile: "conf/config.yml"
 
 out_dir = config.get('output_dir', 'output.sourmash-profiling')
 logs_dir = os.path.join(out_dir, "logs")
@@ -45,7 +45,7 @@ rule sourmash_sketch_dna:
     threads: 1
     resources:
         mem_mb=lambda wildcards, attempt: attempt *3000,
-        partition = "low2",
+        partition = "bml",
         time=240,
     log: os.path.join(logs_dir, "sketch", "{sample}.sketch_dna.log")
     benchmark: repeat(os.path.join(benchmarks_dir, "sketch", "{sample}.sketch_dna.benchmark"), 3)
@@ -121,7 +121,7 @@ rule tax_annotate:
     resources:
         mem_mb=lambda wildcards, attempt: attempt *3000,
         time=240,
-        partition = "low2",
+        partition = "bml",
     params:
         outd= lambda w: os.path.join(out_dir, f'gather'),
     conda: "conf/env/sourmash.yml"

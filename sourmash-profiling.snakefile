@@ -2,7 +2,7 @@ import os, sys
 import pandas as pd
 import glob
 
-configfile: "config.yml"
+configfile: "conf/config.yml"
 
 out_dir = config.get('output_dir', 'output.sourmash-profiling')
 logs_dir = os.path.join(out_dir, "logs")

@@ -1,5 +1,5 @@
 
-sample_info: samples.csv
+sample_info: conf/samples.csv
 output_dir: output.sourmash-profiling
 
 ksize: [21,31,51]
