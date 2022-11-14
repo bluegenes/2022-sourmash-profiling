@@ -1,0 +1,4 @@
+.snakemake/
+databases
+inputs
+logs/

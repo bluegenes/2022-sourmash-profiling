@@ -1,0 +1,28 @@
+
+sample_info: samples.csv
+output_dir: output.sourmash-profiling
+
+ksize: [21,31,51]
+
+search_databases:
+  k21:
+    - databases/genbank-2022.03-archaea-k21.zip
+    - databases/genbank-2022.03-bacteria-k21.zip
+    - databases/genbank-2022.03-fungi-k21.zip
+    - databases/genbank-2022.03-protozoa-k21.zip
+    - databases/genbank-2022.03-viral-k21.zip
+  k31:
+    - databases/genbank-2022.03-archaea-k31.zip
+    - databases/genbank-2022.03-bacteria-k31.zip
+    - databases/genbank-2022.03-fungi-k31.zip
+    - databases/genbank-2022.03-protozoa-k31.zip
+    - databases/genbank-2022.03-viral-k31.zip
+  k51:
+    - databases/genbank-2022.03-archaea-k51.zip
+    - databases/genbank-2022.03-bacteria-k51.zip
+    - databases/genbank-2022.03-fungi-k51.zip
+    - databases/genbank-2022.03-protozoa-k51.zip
+    - databases/genbank-2022.03-viral-k51.zip
+
+database_lineage_files:
+  - databases/genbank-2022.03-lineages.csv
